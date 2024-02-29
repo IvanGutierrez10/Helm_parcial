@@ -4,6 +4,9 @@ metadata:
   name: estudiantestrabajo-deployment
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: estudiantestrabajo-mysql
   template:
     spec:
       containers:

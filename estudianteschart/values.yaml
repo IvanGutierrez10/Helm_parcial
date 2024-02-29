@@ -1,3 +1,12 @@
-DB_HOST: "mysql"
-DB_NAME: "estudiantes"
-DB_USER_PASS: "root"
+env:
+  DB_HOST: "mysql"
+  DB_NAME: "estudiantes"
+  DB_USER_PASS: "root"
+
+resources:
+    requests:
+      cpu: "300m"
+      memory: "600Mi"
+    limits:
+      cpu: "600m"
+      memory: "1200Mi"
