@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: estudiantestrabajo
-          image: ivangues/estudiantestrabajo:2.0.1
+          image: ivangues/estudiantestrabajo:{{ .Values.env.APP_VERSION }}
           ports:
             - containerPort: 9090
           env:
