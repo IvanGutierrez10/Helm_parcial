@@ -19,13 +19,13 @@ spec:
             - containerPort: 9090
           env:
             - name: DB_HOST
-              value: {{ .Values.DB_HOST}}
+              value: "mysql"
             - name: DB_NAME
-              value: {{ .Values.DB_NAME}}
+              value: "estudiantes"
             - name: DB_USERNAME
-              value: {{ .Values.DB_USER_PASS}}
+              value: "root"
             - name: DB_PASSWORD
-              value: {{ .Values.DB_USER_PASS}}
+              value: "root"
           resources:
             requests:
               cpu: "300m"
