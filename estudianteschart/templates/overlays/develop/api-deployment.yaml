@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: estudiantestrabajo-deployment
 spec:
-  replicas: {{ .Values.replicaCount_develop }}
+  replicas: 1
   selector:
     matchLabels:
       app: estudiantestrabajo-mysql
