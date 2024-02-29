@@ -1,4 +1,3 @@
-env:
-  DB_HOST: "mysql"
-  DB_NAME: "estudiantes"
-  DB_USER_PASS: "root"
+DB_HOST: "mysql"
+DB_NAME: "estudiantes"
+DB_USER_PASS: "root"
