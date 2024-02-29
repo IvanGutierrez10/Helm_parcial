@@ -1,2 +1,4 @@
 env:
-  APP_VERSION: "2.0.1"
+  DB_HOST: "mysql"
+  DB_NAME: "estudiantes"
+  DB_USER_PASS: "root"

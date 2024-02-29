@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
         - name: estudiantestrabajo
-          image: ivangues/estudiantestrabajo:{{ .Values.env.APP_VERSION }}
+          image: ivangues/estudiantestrabajo:2.0.1
           ports:
             - containerPort: 9090
           env:
             - name: DB_HOST
-              value: mysql
+              value: {{ .Values.env.DB_HOST }}
             - name: DB_NAME
-              value: estudiantes
+              value: {{ .Values.env.DB_NAME }}
             - name: DB_USERNAME
-              value: root
+              value: {{ .Values.env.DB_USER_PASS }}
             - name: DB_PASSWORD
-              value: root
+              value: {{ .Values.env.DB_USER_PASS }}
           resources:
             requests:
               cpu: "300m"
