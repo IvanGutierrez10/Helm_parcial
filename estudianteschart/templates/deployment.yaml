@@ -17,6 +17,15 @@ spec:
           image: ivangues/estudiantestrabajo:2.0.0
           ports:
             - containerPort: 9090
+          env:
+            - name: DB_HOST
+              value: mysql
+            - name: DB_NAME
+              value: estudiantes
+            - name: DB_USERNAME
+              value: root
+            - name: DB_PASSWORD
+              value: root
           resources:
             requests:
               cpu: "600m"
