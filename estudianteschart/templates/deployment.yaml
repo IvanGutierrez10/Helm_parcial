@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: estudiantestrabajo
-          image: ivangues/estudiantestrabajo:1.1.1
+          image: ivangues/estudiantestrabajo:2.0.0
           ports:
-            - containerPort: 8080
+            - containerPort: 9090
           resources:
             requests:
               cpu: "600m"
@@ -27,13 +27,13 @@ spec:
           startupProbe:
             httpGet:
               path: /vida
-              port: 8080
+              port: 9090
             failureThreshold: 30
             periodSeconds: 60
           livenessProbe:
             httpGet:
               path: /vida
-              port: 8080
+              port: 9090
             initialDelaySeconds: 3
             timeoutSeconds: 3
             periodSeconds: 60
