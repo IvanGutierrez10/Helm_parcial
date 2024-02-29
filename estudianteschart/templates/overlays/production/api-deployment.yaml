@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estudiantestrabajo-deployment
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: estudiantestrabajo
+          resources:
+            requests:
+              cpu: "600m"
+              memory: "1200Mi"
+            limits:
+              cpu: "800m"
+              memory: "1600Mi"
