@@ -3,6 +3,10 @@ kind: Deployment
 metadata:
   name: estudiantestrabajo-deployment
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: estudiantestrabajo-mysql
   template:
     spec:
       containers:

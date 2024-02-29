@@ -4,9 +4,9 @@ env:
   DB_USER_PASS: "root"
 
 resources:
-    requests:
-      cpu: "300m"
-      memory: "600Mi"
-    limits:
-      cpu: "600m"
-      memory: "1200Mi"
+  requests:
+    cpu: "300m"
+    memory: "600Mi"
+  limits:
+    cpu: "600m"
+    memory: "1200Mi"
