@@ -11,5 +11,5 @@ public class Estudiante {
     @GeneratedValue
     private int id;
     @Column
-    private String name
+    private String name;
 }
