@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estudiantestrabajo-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: estudiantestrabajo-mysql
+  template:
+    metadata:
+      labels:
+        app: estudiantestrabajo-mysql
+    spec:
+      containers:
+        - name: estudiantestrabajo
+          image: ivangues/estudiantestrabajo:{{.Values.env.APP_VERSION}}
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "600m"
+              memory: "600Mi"
+            limits:
+              cpu: "800m"
+              memory: "800Mi"
+          startupProbe:
+            httpGet:
+              path: /vida
+              port: 8080
+            failureThreshold: 30
+            periodSeconds: 60
+          livenessProbe:
+            httpGet:
+              path: /vida
+              port: 8080
+            initialDelaySeconds: 3
+            timeoutSeconds: 3
+            periodSeconds: 60
+            successThreshold: 1
+            failureThreshold: 5
