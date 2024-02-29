@@ -7,4 +7,3 @@ resources:
   - ../../base
 patches:
   - path: api-deployment.yaml
-  - path: ingress.yaml

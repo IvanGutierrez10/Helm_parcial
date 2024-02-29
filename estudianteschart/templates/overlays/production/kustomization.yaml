@@ -8,4 +8,3 @@ resources:
 patches:
   - path: api-deployment.yaml
   - path: api-hpa.yaml
-  - path: ingress.yaml
