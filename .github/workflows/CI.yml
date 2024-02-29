@@ -26,3 +26,8 @@ jobs:
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
+      - name: Helm Install
+        run: |
+          helm upgrade --install 1.16.0 Chart.yaml
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
